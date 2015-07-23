@@ -5,6 +5,9 @@
  * Top10 
  *  
  */  
+// to be investigated https://github.com/mitchellsimoens/Ext.ux.touch.grid/issues/40
+// https://www.sencha.com/forum/showthread.php?248221-Change-Template-in-List-(v2.1)/page2
+
 Ext.define("Practice.controller.portalController", {  
     extend : "Ext.app.Controller",  
     config : {  
@@ -54,12 +57,13 @@ Ext.define("Practice.controller.portalController", {
           
         on_column_type_change :function(field, newValue, oldValue, eOpts){  
             this.setCurrentType(newValue);  
-            this.doGetData();  
+
+            
         },  
           
         on_portal_panel_activate : function(){  
             this.setCurrentType("1");  
-            this.doGetData();  
+            
         },  
           
         doGetData:function(){  
